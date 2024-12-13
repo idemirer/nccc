@@ -7,7 +7,11 @@
   --foreground: #171717;
 } */
 
+<<<<<<< HEAD
 /* @media (prefers-color-scheme: light) {
+=======
+@media (prefers-color-scheme: dark) {
+>>>>>>> c4cffab90e226a9f13996200d61ed9fc9b87da5f
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
@@ -28,13 +32,4 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-p {
-  padding: 5px 0px;
 }

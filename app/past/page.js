@@ -1,7 +1,8 @@
-export default function Page() {
+export default function Past() {
   return (
     <div>
-      <h1 class='text-lg font-bold'>Past Conference Postings!</h1>
+      <h1>Past Conferences</h1>
+      <p>This is the past conferences page.</p>
     </div>
   );
 }
