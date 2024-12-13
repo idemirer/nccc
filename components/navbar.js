@@ -4,11 +4,8 @@ import Link from 'next/link';
 import { ChangeTheme } from './changeTheme';
 
 export default function Navbar() {
-<<<<<<< HEAD
-=======
   const { theme, toggleTheme } = ChangeTheme();
 
->>>>>>> c4cffab90e226a9f13996200d61ed9fc9b87da5f
   const navItems = {
     '/': {
       name: 'Home',
