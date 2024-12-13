@@ -1,12 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
 import Link from 'next/link';
 import ChangeTheme from './changeTheme';
 
 export default function Navbar() {
-  const [active, setActive] = useState(false);
-
   const navItems = {
     '/': {
       name: 'Home',

@@ -2,19 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
-/* body[data-theme='light'] {
+body[data-theme='light'] {
   --background: #fff;
   --foreground: #000;
 }
@@ -22,7 +22,7 @@
 body[data-theme='dark'] {
   --background: #222222;
   --foreground: #ededed;
-} */
+}
 
 body {
   color: var(--foreground);
