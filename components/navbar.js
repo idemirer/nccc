@@ -1,49 +1,33 @@
 'use client';
-
 import Link from 'next/link';
-import { ChangeTheme } from './changeTheme';
+import { useTheme } from '@/context/ThemeContext';
+import MobileNavBar from '@/components/mobileNavbar';
+import navLinks from '@/data/navLinks.json';
 
 export default function Navbar() {
-  const { theme, toggleTheme } = ChangeTheme();
-
-  const navItems = {
-    '/': {
-      name: 'Home',
-    },
-    '/conference': {
-      name: '2025 Conference',
-    },
-    '/committee': {
-      name: 'Organizing Committee',
-    },
-    '/past': {
-      name: 'Past Conferences',
-    },
-    '/location': {
-      name: 'Location',
-    },
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className='flex justify-start items-center py-4 mx-auto pb-4'>
-      <div className='flex'>
-        {Object.entries(navItems).map(([path, { name }]) => (
+    <nav className='flex justify-start items-center py-2 pb-2 mr-4'>
+      <div className='lg:flex hidden md:ml-2 md:block'>
+        {navLinks.map((path) => (
           <Link
-            key={path}
-            href={path}
+            key={path.name}
+            href={path.path}
             className='rounded-md text-xl font-bold hover:text-gray-800 hover:bg-gray-300 p-2'
           >
-            {name}
+            {path.name}
           </Link>
         ))}
       </div>
-      <div className='ml-auto'>
-        <Link href='#' onClick={toggleTheme}>
+      <div className='ml-auto hidden md:inline'>
+        <Link href='#' onClick={toggleTheme} aria-label='theme-change'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='24'
             height='24'
             fill='currentColor'
+            className='fill-current'
             enableBackground='new 0 0 24 24'
             viewBox='0 0 24 24'
           >
@@ -56,6 +40,7 @@ export default function Navbar() {
           </svg>
         </Link>
       </div>
+      <MobileNavBar />
     </nav>
   );
 }

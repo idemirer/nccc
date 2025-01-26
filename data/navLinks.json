@@ -1,0 +1,8 @@
+[
+  { "path": "/", "name": "Home" },
+  { "path": "/conference", "name": "2025 Conference" },
+  { "path": "/committee", "name": "Organizing Committee" },
+  { "path": "/past", "name": "Past Conferences" },
+  { "path": "/location", "name": "Location" },
+  { "path": "/contact", "name": "Contact" }
+]

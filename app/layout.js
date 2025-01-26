@@ -2,6 +2,7 @@ import './globals.css';
 import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Navbar from '@/components/navbar';
+import { ThemeProvider } from '@/context/ThemeContext';
 
 export const metadata = {
   title: 'North Country Cybersecurity Conference',
@@ -12,11 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`container mx-auto px-4 py-4`}>
-        <Header />
-        <Navbar />
-        {children}
-        <Footer />
+      <body className='antialiased w-full mt-1 md:mt-4 md:max-w-screen-lg lg:mx-auto light' data-theme='light'>
+        <ThemeProvider>
+          <Header />
+          <Navbar />
+          <main className='min-h-96 mx-4'>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
